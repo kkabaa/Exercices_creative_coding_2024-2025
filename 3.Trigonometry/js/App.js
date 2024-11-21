@@ -21,12 +21,12 @@ export default class App {
     this.circle1.motion_radiusX = 400;
     // this.circle1.angleX=90;
     // create 3rd circle
-    // this.circle2 = new Circle(this.width / 2, this.height / 2, 10);
-    // this.circle2.color = "green";
-    // this.circle2.speedX = 4;
-    // this.circle2.speedY = 4;
-    // this.circle2.motion_radiusX = 400;
-    // // this.circle2.angleX = 90;
+    this.circle2 = new Circle(this.width / 2, this.height / 2, 10);
+    this.circle2.color = "green";
+    this.circle2.speedX = 4;
+    this.circle2.speedY = 4;
+    this.circle2.motion_radiusX = 400;
+    // this.circle2.angleX = 90;
 
     // créer un outil de dessin
     this.drawingTool = new DrawingTool(this.ctx);
@@ -49,14 +49,14 @@ export default class App {
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.circle.move();
     this.circle1.move();
-    // this.circle2.move();
+    this.circle2.move();
 
     this.drawingTool.addPoint(this.circle.x, this.circle.y);
     this.drawingTool.addPoint(this.circle1.x, this.circle1.y);
-    // this.drawingTool1.color = "blue";
-    //  this.drawingTool1.addPoint(this.circle2.x, this.circle2.y);
+    this.drawingTool1.color = "blue";
+     this.drawingTool1.addPoint(this.circle2.x, this.circle2.y);
     this.drawingTool.draw();
-    // this.drawingTool1.draw();
+    this.drawingTool1.draw();
 
     this.circle.draw(this.ctx);
     this.circle1.draw(this.ctx);
